@@ -34,6 +34,47 @@ Plot Class
 Plotting Function Reference
 ---------------------------
 
+Examples
+~~~~~~~~
+
+Basic Plot - Quadratic Function
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. plot::
+   :format: doctest
+   :include-source: True
+
+   >>> from sympy import symbols, plot
+   >>> x = symbols('x')
+   >>> plot(x**2, (x, -5, 5))
+
+Multiple Functions Plot
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. plot::
+   :format: doctest
+   :include-source: True
+
+   >>> from sympy import symbols, plot
+   >>> x = symbols('x')
+   >>> p1 = plot(x**2, (x, -5, 5))
+   >>> p2 = plot(x**3, (x, -5, 5))
+   >>> p1.append(p2[0])
+   >>> p1
+
+Trigonometric Functions
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. plot::
+   :format: doctest
+   :include-source: True
+
+   >>> from sympy import symbols, sin, cos, pi, plot
+   >>> x = symbols('x')
+   >>> plot(sin(x), cos(x), (x, -2*pi, 2*pi))
+
+
+
 .. autofunction:: plot
 
 .. autofunction:: plot_parametric
